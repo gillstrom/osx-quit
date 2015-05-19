@@ -1,0 +1,41 @@
+{
+  "name": "osx-quit",
+  "version": "0.0.0",
+  "description": "Quit an application in OS X",
+  "license": "MIT",
+  "repository": "gillstrom/osx-quit",
+  "author": {
+    "name": "Andreas Gillström",
+    "email": "andreasgillstrom@gmail.com",
+    "url": "github.com/gillstrom"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "bin": "cli.js",
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "osx",
+    "os x",
+    "apple",
+    "quit",
+    "exit",
+    "close",
+    "app",
+    "application",
+    "cli"
+  ],
+  "dependencies": {
+    "applescript": "^1.0.0",
+    "meow": "^3.1.0"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
