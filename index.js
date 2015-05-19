@@ -1,5 +1,4 @@
 'use strict';
-
 var applescript = require('applescript');
 
 module.exports = function (app, cb) {
