@@ -8,6 +8,5 @@ test('quit', function (t) {
 
 	osxQuit('Safari', function (err) {
 		t.assert(!err, err);
-		t.end();
 	});
 });

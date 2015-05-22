@@ -10,12 +10,12 @@ module.exports = function (app, cb) {
 		throw new TypeError('Expected name of an app');
 	}
 
-	applescript.execString('quit app "' + app + '"', function (err, res) {
+	applescript.execString('quit app "' + app + '"', function (err) {
 		if (err) {
 			cb(err);
 			return;
 		}
 
-		cb(null);
+		cb();
 	});
 };
