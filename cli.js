@@ -5,8 +5,8 @@ var osxQuit = require('./');
 
 var cli = meow({
 	help: [
-		'Examples',
-		'  $ osx-quit Safari'
+		'Usage',
+		'  $ osx-quit <app-name>'
 	].join('\n')
 });
 
