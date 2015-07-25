@@ -7,7 +7,7 @@ var cli = meow({
 	help: [
 		'Usage',
 		'  $ osx-quit <app-name>'
-	].join('\n')
+	]
 });
 
 if (!cli.input.length) {
