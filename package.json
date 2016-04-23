@@ -10,7 +10,7 @@
     "url": "github.com/gillstrom"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "node test.js"
@@ -32,8 +32,8 @@
     "cli"
   ],
   "dependencies": {
-    "applescript": "^1.0.0",
-    "meow": "^3.3.0"
+    "meow": "^3.3.0",
+    "run-applescript": "^2.1.0"
   },
   "devDependencies": {
     "ava": "0.0.4"

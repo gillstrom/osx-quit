@@ -1,25 +1,16 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
-var osxQuit = require('./');
+const meow = require('meow');
+const osxQuit = require('./');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  $ osx-quit <app-name>'
-	]
-});
+const cli = meow(`
+	Usage
+	  $ osx-quit <app-name>
+`);
 
-if (!cli.input.length) {
+if (cli.input.length === 0) {
 	console.error('Application is required');
 	process.exit(1);
 }
 
-osxQuit(cli.input[0], function (err) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-
-	console.log(cli.input[0] + ' quit successfully');
-});
+osxQuit(cli.input[0]).then(() => console.log(`${cli.input[0]} quit successfully`));

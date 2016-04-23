@@ -13,9 +13,9 @@ $ npm install --save osx-quit
 ## Usage
 
 ```js
-var osxQuit = require('osx-quit');
+const osxQuit = require('osx-quit');
 
-osxQuit('Safari', function (err) {
+osxQuit('Safari').then(() => {
 	console.log('Safari quit successfully');
 });
 ```

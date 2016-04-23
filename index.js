@@ -1,21 +1,14 @@
 'use strict';
-var applescript = require('applescript');
+const runApplescript = require('run-applescript');
 
-module.exports = function (app, cb) {
+module.exports = app => {
 	if (process.platform !== 'darwin') {
-		throw new Error('Only OS X systems are supported');
+		return Promise.reject(new Error('Only OS X systems are supported'));
 	}
 
 	if (typeof app !== 'string') {
-		throw new TypeError('Expected name of an app');
+		return Promise.reject(new TypeError('Expected name of an app'));
 	}
 
-	applescript.execString('quit app "' + app + '"', function (err) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb();
-	});
+	return runApplescript(`quit app "${app}"`);
 };
