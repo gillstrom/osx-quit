@@ -13,7 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "ava"
   },
   "bin": "cli.js",
   "files": [
@@ -36,6 +36,6 @@
     "run-applescript": "^2.1.0"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "*"
   }
 }

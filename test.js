@@ -1,12 +1,7 @@
-'use strict';
+import test from 'ava';
+import m from './';
 
-var test = require('ava');
-var osxQuit = require('./');
-
-test('quit', function (t) {
-	t.plan(1);
-
-	osxQuit('Safari', function (err) {
-		t.assert(!err, err);
-	});
+test('quit', async t => {
+	await m('Safari');
+	t.pass();
 });
